@@ -1,0 +1,6 @@
+# -r frontend/requirements.in
+-r hpath-sim/requirements.in
+
+ipykernel
+pylint
+pycodestyle

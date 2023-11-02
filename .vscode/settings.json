@@ -1,0 +1,11 @@
+{
+    "git.autoRepositoryDetection": "subFolders",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.activateEnvironment": true,
+    "editor.rulers": [
+        100
+    ],
+    "autopep8.args": [
+        "--max-line-length=100"
+    ],
+}
