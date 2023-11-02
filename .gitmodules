@@ -1,6 +1,0 @@
-[submodule "hpath-sim"]
-	path = hpath-sim
-	url = https://github.com/cam-digital-hospitals/hpath-sim.git
-[submodule "frontend"]
-	path = frontend
-	url = https://github.com/cam-digital-hospitals/frontend.git
