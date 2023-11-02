@@ -162,7 +162,9 @@ redis==5.0.1
     #   -r frontend/requirements.in
     #   rq
 requests==2.31.0
-    # via dash
+    # via
+    #   -r frontend/requirements.in
+    #   dash
 retrying==1.3.4
     # via dash
 rq==1.15.1
