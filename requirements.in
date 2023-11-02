@@ -1,4 +1,4 @@
-# -r frontend/requirements.in
+-r frontend/requirements.in
 -r hpath-sim/requirements.in
 
 ipykernel

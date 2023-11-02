@@ -7,13 +7,30 @@ services:
       interval: 1s
       timeout: 10s
       retries: 5
-  worker:
-    image: hpath
+  hpath-worker:
+    image: ghcr.io/cam-digital-hospitals/hpath
     build:
-      context: ..
+      context: .
       dockerfile: hpath-sim/dockerfile 
     volumes:
-      - ./hpath-sim/db:/db:rw
-    command: python -m job_queue
+      - ../hpath-sim/db:/db:rw
+    command: python -m hpath_backend.server.job_queue
     depends_on:
       - redis
+  hpath-restful:
+    image: ghcr.io/cam-digital-hospitals/hpath
+    volumes:
+      - ./hpath-sim/db:/db:rw
+    command: python -m hpath_backend.server.restful
+    depends_on:
+      - redis
+      - hpath-worker
+    ports:
+      - 5000:5000
+  frontend:
+    image: ghcr.io/cam-digital-hospitals/frontend
+    build:
+      context: .
+      dockerfile: frontend/dockerfile
+    ports:
+      - 80:3000
