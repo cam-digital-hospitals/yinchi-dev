@@ -13,14 +13,14 @@ services:
       context: .
       dockerfile: hpath-sim/dockerfile 
     volumes:
-      - ../hpath-sim/db:/db:rw
+      - ./db:/db:rw
     command: python -m hpath_backend.server.job_queue
     depends_on:
       - redis
   hpath-restful:
     image: ghcr.io/cam-digital-hospitals/hpath
     volumes:
-      - ./hpath-sim/db:/db:rw
+      - ./db:/db:rw
     command: python -m hpath_backend.server.restful
     depends_on:
       - redis
