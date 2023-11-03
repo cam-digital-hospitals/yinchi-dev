@@ -32,6 +32,7 @@ dash==2.14.1
     #   dash-ag-grid
     #   dash-bootstrap-components
     #   dash-bootstrap-templates
+    #   dash-compose
 dash-ag-grid==2.4.0
     # via -r frontend/requirements.in
 dash-bootstrap-components==1.5.0
@@ -39,6 +40,8 @@ dash-bootstrap-components==1.5.0
     #   -r frontend/requirements.in
     #   dash-bootstrap-templates
 dash-bootstrap-templates==1.1.1
+    # via -r frontend/requirements.in
+dash-compose==2023.3.12
     # via -r frontend/requirements.in
 dash-core-components==2.0.0
     # via dash

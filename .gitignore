@@ -8,3 +8,6 @@ venv/
 
 db/*
 !db/*example*
+
+# Quick testing of single Dash pages
+pages-dev
