@@ -8,4 +8,69 @@
     "autopep8.args": [
         "--max-line-length=100"
     ],
+
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text",
+        "foreground": "black",
+        "background": "white",
+        "opacity": 50,
+        "iconColour": "blue",
+        "gutterIcon": true,
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "issue-draft",
+            "foreground": "black",
+            "background": "white",
+            "iconColour": "white",
+        },
+        "NOTE": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray",
+            "hideFromTree": true
+        },
+        "COMMENT": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray",
+        },
+        "FIXME": {
+            "foreground": "black",
+            "background": "yellow",
+            "iconColour": "yellow",
+        },
+        "BUG": {
+            "foreground": "black",
+            "background": "red",
+            "iconColour": "red",
+        },
+        "[ ]": {
+            "icon": "issue-draft",
+            "foreground": "black",
+            "background": "white",
+            "iconColour": "white",
+        },
+        "[x]": {
+            "icon": "issue-closed",
+            "foreground": "black",
+            "background": "#9FA",
+            "iconColour": "green",
+            "hideFromTree": true
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "NOTE",
+        "COMMENT",
+        "[ ]",
+        "[x]"
+    ],
 }
