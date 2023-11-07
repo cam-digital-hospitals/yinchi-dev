@@ -12,7 +12,7 @@
     "todo-tree.highlights.useColourScheme": true,
     "todo-tree.highlights.defaultHighlight": {
         "icon": "alert",
-        "type": "text",
+        "type": "tag",
         "foreground": "black",
         "background": "white",
         "opacity": 50,
