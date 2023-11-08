@@ -73,4 +73,7 @@
         "[ ]",
         "[x]"
     ],
+    "[markdown]": {
+        "editor.wordWrap": "bounded"
+    },
 }
