@@ -12,6 +12,10 @@ astroid==3.0.1
     # via pylint
 asttokens==2.4.1
     # via stack-data
+attrs==23.1.0
+    # via
+    #   jsonschema
+    #   referencing
 blinker==1.7.0
     # via flask
 certifi==2023.7.22
@@ -59,6 +63,8 @@ et-xmlfile==1.1.0
     # via openpyxl
 executing==2.0.1
     # via stack-data
+fastjsonschema==2.19.0
+    # via nbformat
 flask==3.0.0
     # via
     #   -r hpath-sim/requirements.in
@@ -86,12 +92,17 @@ jedi==0.19.1
     # via ipython
 jinja2==3.1.2
     # via flask
+jsonschema==4.20.0
+    # via nbformat
+jsonschema-specifications==2023.11.2
+    # via jsonschema
 jupyter-client==8.5.0
     # via ipykernel
 jupyter-core==5.5.0
     # via
     #   ipykernel
     #   jupyter-client
+    #   nbformat
 markupsafe==2.1.3
     # via
     #   jinja2
@@ -102,10 +113,16 @@ matplotlib-inline==0.1.6
     #   ipython
 mccabe==0.7.0
     # via pylint
+nbformat==5.9.2
+    # via nbstripout
+nbstripout==0.6.1
+    # via -r requirements.in
 nest-asyncio==1.5.8
     # via
     #   dash
     #   ipykernel
+networkx==3.2.1
+    # via -r hpath-sim/requirements.in
 numpy==1.26.1
     # via
     #   dash-bootstrap-templates
@@ -166,12 +183,20 @@ redis==5.0.1
     # via
     #   -r frontend/requirements.in
     #   rq
+referencing==0.31.1
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
 requests==2.31.0
     # via
     #   -r frontend/requirements.in
     #   dash
 retrying==1.3.4
     # via dash
+rpds-py==0.13.2
+    # via
+    #   jsonschema
+    #   referencing
 rq==1.15.1
     # via -r hpath-sim/requirements.in
 salabim==23.3.11
@@ -199,6 +224,7 @@ traitlets==5.13.0
     #   jupyter-client
     #   jupyter-core
     #   matplotlib-inline
+    #   nbformat
 typing-extensions==4.8.0
     # via
     #   dash
