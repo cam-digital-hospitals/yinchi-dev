@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 cd frontend
-pip-compile
+pip-compile --upgrade
 cd ../hpath-sim
-pip-compile
+pip-compile --upgrade
 
 cd ..
-pip-compile
+pip-compile --upgrade
 pip-sync
