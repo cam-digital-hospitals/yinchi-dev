@@ -1,0 +1,25 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Build docker images
+        run: |
+          docker login --username ${{ github.actor }} --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build --file ./frontend/dockerfile --tag ghcr.io/cam-digital-hospitals/frontend:latest .
+          docker build --file ./hpath-sim/dockerfile --tag ghcr.io/cam-digital-hospitals/hpath:latest .
+      - name: Push to ghcr.io
+        run: |
+          docker push ghcr.io/cam-digital-hospitals/frontend:latest
+          docker push ghcr.io/cam-digital-hospitals/hpath:latest
