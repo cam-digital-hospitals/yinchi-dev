@@ -16,7 +16,7 @@ jobs:
           submodules: true
       - name: Build docker images
         run: |
-          docker login --username ${{ github.actor }} --password ${{ secrets.GH_PAT }} ghcr.io
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker build --file ./frontend/dockerfile --tag ghcr.io/cam-digital-hospitals/frontend:latest .
           docker build --file ./hpath-sim/dockerfile --tag ghcr.io/cam-digital-hospitals/hpath:latest .
       - name: Push to ghcr.io
